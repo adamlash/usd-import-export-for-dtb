@@ -1,0 +1,24 @@
+Module,Description
+Quest (Joint Airlock),Primary airlock for the International Space Station.
+Mobile Base System,Base platform for the robotic arms.
+Dextre (SPDM),"Known as the Special Purpose Dexterous Manipulator (SPDM), is a two-armed robot, or telemanipulator, which is part of the Mobile Servicing System."
+Canadarm2 (SSRMS),"Officially known as the Space Station Remote Manipulator System (SSRMS), It is a a series of robotic arms that were used on the Space Shuttle orbiters to deploy, manoeuvre, and capture payloads."
+Unity (Node 1),Linkage between the orbiting laboratory's Russian Orbital Segment and US Orbital Segment.
+Harmony (Node 2),"The ""utility hub"" of the International Space Station. It connects the laboratory modules of the United States, Europe and Japan, as well as providing electrical power and electronic data."
+Tranquility (Node 3),"Contains environmental control systems, life support systems, a toilet, exercise equipment, and an observation cupola."
+P1 Truss,The P1 and S1 trusses (also called the Port and Starboard Side Thermal Radiator Trusses) are attached to the S0 truss and contain carts to transport the Canadarm2 and astronauts to worksites along with the space station.
+P3 Truss,"The P3 and P4 segments together contain a pair of solar arrays, a radiator, and a rotary joint that will aim the solar arrays, and connects P3 to P4."
+P4 Truss,"The P3 and P4 segments together contain a pair of solar arrays, a radiator, and a rotary joint that will aim the solar arrays, and connects P3 to P4."
+P6 Truss,Contains a large Solar Array Wing (SAW) that generated essential electricity for the station.
+Zvezda (Service Module),"provides all of the station's life support systems, some of which are supplemented in the US Orbital Segment (USOS), as well as living quarters for two crew members."
+Zarya (FGB),"Primarily storage, both internally and in its external fuel tanks."
+RS Node (Prichal),"Spherical module with six docking ports (forward, aft, port, starboard, zenith, and nadir) to provide additional docking ports for Soyuz and Progress spacecraft."
+Rassvet (MRM-1),Primarily used for cargo storage and as a docking port for visiting spacecraft.
+Poisk (MRM-2),"combines various docking, EVA, and science capabilities, also has two egress hatches for EVAs in addition to the two spacecraft docking ports."
+S0 Truss,"The S0 truss, (also called the Center Integrated Truss Assembly Starboard 0 Truss) forms the central backbone of the Space Station."
+S1 Truss,The P1 and S1 trusses (also called the Port and Starboard Side Thermal Radiator Trusses) are attached to the S0 truss and contain carts to transport the Canadarm2 and astronauts to worksites along with the space station.
+S3 Truss,"The S3 and S4 segments together contain a pair of solar arrays, a radiator, and a rotary joint that will aim the solar arrays."
+S4 Truss,"The S3 and S4 segments together contain a pair of solar arrays, a radiator, and a rotary joint that will aim the solar arrays."
+S6 Truss,Contains a large Solar Array Wing (SAW) that generated essential electricity for the station.
+Destiny (US Labratory),Primary operating facility for U.S. research payloads aboard the International Space Station (ISS).
+Z1 Truss,"Contains the control moment gyroscope (CMG) assemblies, electrical wiring, communications equipment, and two plasma contactors designed to neutralize the static electrical charge of the space station."
