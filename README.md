@@ -4,17 +4,17 @@ Welcome to the USD Import and Export Demo for DTB. This demo leverages the OpenU
 This repo aims both to provide the Notebook and flow on how users can contextualize their own 3D, as well as a demo to show how this is possible. The demo uses data from the International Space Station representing a series of Modules, and a 3D Model provided by NASA with embedded metadata within the file.
 
 # Table of Contents
-- [Getting Started](#Getting-Started)
-- [Prerequisites and Setup](#Prerequisites)
-- [Running the Notebook](#Runnning-the-Notebook)
-- [Next Steps](#Next-Steps)
-- [Appendix](#appendix)
+* [Getting Started](#Getting*Started)
+* [Prerequisites and Setup](#Prerequisites)
+* [Running the Notebook](#Runnning*the*Notebook)
+* [Next Steps](#Next*Steps)
+* [Appendix](#appendix)
 
 # Getting Started
 This repo makes use of a few core pieces of software:
 
 ### Microsoft Fabric
-[Microsoft Fabric](https://www.microsoft.com/en-us/microsoft-fabric) is an end-to-end, unified analytics platform designed to bring together all data and analytics tools into one place. It aims to provide a single environment for data professionals and business users to collaborate on data projects, covering everything from data ingestion and storage to processing and analysis.
+[Microsoft Fabric](https://www.microsoft.com/en*us/microsoft*fabric) is an end*to*end, unified analytics platform designed to bring together all data and analytics tools into one place. It aims to provide a single environment for data professionals and business users to collaborate on data projects, covering everything from data ingestion and storage to processing and analysis.
 
 ### Digital Twin Builder
 Within Fabric, the core technology leveraged is the Digital Twin Builder (DTB) from Fabric Realtime Intelligence. (FIX)**We do some Ontologies and stuff**: [Documentation](#www.google.com)
@@ -23,28 +23,29 @@ Within Fabric, the core technology leveraged is the Digital Twin Builder (DTB) f
 [OpenUSD](https://openusd.org/release/index.html) is a file standard for extending and interchanging 3D Formats. Originally designed by Pixar for use in the SFX world, it has since grown traction in the Industrial space as a fantastic file format for interchanging 3D, as well as enriching 3D with relevant semantic information and metadata.
 
 # Prerequisites and Digital Twin Setup
-- Microsoft Fabric Instance
-- 3D File/s
-- Digital Twin Builder, with Mapped Entities related to the 3D file.
+* Microsoft Fabric Instance
+* 3D File/s
+* Digital Twin Builder, with Mapped Entities related to the 3D file.
 
 *For the sake of this demo, we are providing the steps to set up DTB, as well as a 3D file within the Repo.*
 
 We will need to prepare Fabric, and our DTB instance so we can match our files within it. Within this repo are three Files
 
-* modules.csv - A table of modules within the ISS.
-* iss.usd - A 3D File of the ISS.
-* USDtoDTB.ipynb - The notebook including relevant code to run this Demo.
+* modules.csv: A table of modules within the ISS.
+* disciplines.csv: (Optional) a table of Disciplines representing the Flight Desk in charge of the modules in the ISS.
+* iss.usd:  A 3D File of the ISS.
+* USDtoDTB.ipynb: The notebook including relevant code to run this Demo.
 
 
 ### Fabric Prep
 1. Create new Workspace within Fabric
 2. Create a Lakehouse within Fabric
-    - *Within the Workspace, click 'New Item' in the top left and look for 'Lakehouse'
+    * *Within the Workspace, click 'New Item' in the top left and look for 'Lakehouse'
 3. In the top Left of the Workspace, click 'Import..' and Select 'Notebook > From this Computer'
-    - Select the USDtoDTB Notebook from your Local Machine
+    * Select the USDtoDTB Notebook from your Local Machine
 4. Upload the following files into the Lakehouse
-    - modules.csv
-    - iss.usd
+    * modules.csv
+    * iss.usd
 5. Under the 'Files' Directory, right click on 'modules.CSV' and load this into 'New Table'. You can leave this called modules.
 
 ### Digital Twin Builder Preparation
@@ -52,7 +53,7 @@ We will be creating a series of Modules within our Digital Twin instance to repr
 
 
 1. Create a new 'Digital Twin Builder' Item
-    - *Within the Workspace, click 'New Item' in the top left and look for 'Digital Twin Builder'
+    * *Within the Workspace, click 'New Item' in the top left and look for 'Digital Twin Builder'
 
 *Once in the Digital Twin Builder, we will create two Entities*
 
@@ -62,11 +63,11 @@ We will be creating a series of Modules within our Digital Twin instance to repr
 5. Within the new window that appears, click 'Select Lakehouse Table'
 6. Select the Lakehouse created above, and teh 'Modules' table within it.
 7. For 'Unique ID' select 'Module'
-    - The Unique ID is our Unique Identifier for any Entity Instances that get created.
+    * The Unique ID is our Unique Identifier for any Entity Instances that get created.
 8. For Under 'Mapped Properties' select:
-    - 'Module' for DisplayName 
-    - Add a new field, create 'Description' for Description
-    - Click Apply once done
+    * 'Module' for DisplayName 
+    * Add a new field, create 'Description' for Description
+    * Click Apply once done
 9. Save this config, and go to the 'Scheduling' Tab and run this mapping job now.
 
 
@@ -91,10 +92,10 @@ While this demo will work fine as we are linking Modules <> 3D Assets, a Digital
 3. Within the new window that appears, click 'Select Lakehouse Table'
 4. Select the Lakehouse created above, and the 'Discipline' table within it.
 5. For 'Unique ID' select 'Discipline'
-    - The Unique ID is our Unique Identifier for any Entity Instances that get created.
+    * The Unique ID is our Unique Identifier for any Entity Instances that get created.
 6. For Under 'Mapped Properties' select:
-    - 'Discipline' for DisplayName
-    - Add a new field, create 'Module' for Module
+    * 'Discipline' for DisplayName
+    * Add a new field, create 'Module' for Module
 7. Save this config, and go to the 'Scheduling' Tab and run this mapping job now.
 
 Now we can create the Relationship
@@ -123,7 +124,7 @@ Once these steps have been run, we will head over to DTB to configure a new Asse
 1. Open the 'USDtoDTB' notebook from your Workspace
 2. On the left, click 'Add Data Items' and add in the Lakehouse from the previous steps.
 3. Within the first cell of the notebook, specify the '3dfile' variable point to the uploaded iss.usd file from earlier
-    - this may be in the path of */lakehouse/default/Files/iss.usd*
+    * this may be in the path of */lakehouse/default/Files/iss.usd*
 4. Run the following Cells *(for more information on what each of these steps are doing, please see the appendix)*
     * Set Stage USD File
     * Import Libraries
@@ -145,9 +146,9 @@ Now that we have a table, we can go through standard DTB mapping phases to creat
 6. Select the Lakehouse created above, and the 'issues' table within it.
 7. For 'Unique ID' select 'AssetId'
 8. For 'Mapped Properties' 
-    - select 'Asset' for DisplayName, 
-    - select sourcePath, leave this name as Sourcepath
-    - click 'Apply' once done.
+    * select 'Asset' for DisplayName, 
+    * select sourcePath, leave this name as Sourcepath
+    * click 'Apply' once done.
 9. Save this config, and go to the 'Scheduling' Tab and run this mapping job now. 
 
 We can now create the relationship between the two data structures
@@ -186,7 +187,7 @@ With Import, we have extracted relevant 3D Metadata embedded within the scene, t
 AFter export, we have a 3D file with an embedded AssetID value, this value can be used a a query point to link the 3D Geometry to its relevant Twin representation within DTB. This can now be used in 3D applications as a key to query relevant information.
 
 ## Next Steps
-Want to render this within Nvidia Omniverse? Check out [Nvidia Omniverse Digital Operations Twin](https://github.com/microsoft/NVIDIA-Omniverse-Azure-Operations-Twin). A demo to get you up and running with operational twins in Azure, using an enriched USD file created from this process.
+Want to render this within Nvidia Omniverse? Check out [Nvidia Omniverse Digital Operations Twin](https://github.com/microsoft/NVIDIA*Omniverse*Azure*Operations*Twin). A demo to get you up and running with operational twins in Azure, using an enriched USD file created from this process.
 
 
 ## Appendix
