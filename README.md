@@ -48,6 +48,9 @@ We will need to prepare Fabric, and our DTB instance so we can match our files w
 5. Under the 'Files' Directory, right click on 'modules.CSV' and load this into 'New Table'. You can leave this called modules.
 
 ### Digital Twin Builder Preparation
+We will be creating a series of Modules within our Digital Twin instance to represent the physical [Modules of the International Space Station](https://en.wikipedia.org/wiki/Assembly_of_the_International_Space_Station#Assembly_sequence). The uploaded Modules table has all the relevant info we need to create a series of twins from this data.
+
+
 1. Create a new 'Digital Twin Builder' Item
     - *Within the Workspace, click 'New Item' in the top left and look for 'Digital Twin Builder'
 
@@ -66,8 +69,21 @@ We will need to prepare Fabric, and our DTB instance so we can match our files w
     - Click Apply once done
 9. Save this config, and go to the 'Scheduling' Tab and run this mapping job now.
 
-#### (Optional), Adding ISS Flight Control positions to Twin
 
+![Mapping Config](./screenshots/ModuleMapping.png)
+![Final Config](./screenshots/ModuleFinalConfig.png)
+
+*the Module Mapping Config should look as follows*
+
+After a few minutes, you may want to click 'Explore' in the top right of the DTB Canvas to view the created Entity Instances, you may monitor the Mapping job by clicking 'Manage Operations' on the toolbar.
+
+![Final Config](./screenshots/ModuleInstances.png)
+
+*The created Module Entity Instances within the 'Explore' Screen*
+
+
+
+#### (Optional), Adding ISS Flight Control positions to Twin
 While this demo will work fine as we are linking Modules <> 3D Assets, a Digital Twin contains more than just one piece of data, to flesh this out, we have included a list of the [Flight Controllers](https://en.wikipedia.org/wiki/List_of_NASA%27s_flight_control_positions#ISS_flight_control_positions_2010%E2%80%93present) that are in charge of various physical modules within the ISS.
 
 1. Click 'Add Entity' and name this Entity 'Discipline'. This will create Entity Instances of the various Disciplines that manage the ISS
@@ -90,11 +106,10 @@ Now we can create the Relationship
 5. For Relationship type, select 'Many Modules per Discipline (1:N)' 
 6. click 'Run Now' to run this contextualization job and join the two entities together.
 
-*After a few minutes, you may want to click 'Explore' in the top right of the DTB Canvas to view the created Entity Instances, you may monitor the Mapping job by clicking 'Manage Operations' on the toolbar.*
-
-We will configure the 3DGeometry Twin and Relationship to the Modules data once we export the relevant info from the USD file.
 
 # Running the Notebook
+With the following steps, we will extract any relevant metadata embeded within the 3D file, from here we will run the notebook to extract the data, and configure the 3DGeometry Twin and Relationship to the Modules data above.
+
 
 ## Import USD to DTB
 The notebook is going to run a few tasks
