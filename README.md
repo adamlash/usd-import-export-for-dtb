@@ -9,7 +9,7 @@ Our Digital Twin will be quite simple, as we want to focus this workflow an appo
 # Table of Contents
 * [Getting Started](#Getting-Started)
 * [Prerequisites and Digital Twin Setup](#Prerequisites-and-Digital-Twin-Setup)
-* [Notebook Setup & Demo Runthrough](#Notebook-Setup-&-Demo-Runthrough)
+* [Notebook Setup and Demo Runthrough](#Notebook-Setup-and-Demo-Runthrough)
 * [Next Steps](#Next-Steps)
 * [FAQ](#FAQ)
 
@@ -86,7 +86,7 @@ After a few minutes, you may want to click 'Explore' in the top right of the DTB
 *The created Module Entity Instances within the 'Explore' Screen*
 
 
-# Notebook Setup & Demo Runthrough
+# Notebook Setup and Demo Runthrough
 With the following steps, we will extract any relevant metadata embeded within the 3D file, from here we will run the notebook to extract the data, so we can use it within our Digital Twin.
 
 ## Notebook Setup
