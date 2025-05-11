@@ -9,7 +9,7 @@ Our Digital Twin will be quite simple, as we want to focus this workflow an appo
 # Table of Contents
 * [Getting Started](#Getting-Started)
 * [Prerequisites and Digital Twin Setup](#Prerequisites-and-Digital-Twin-Setup)
-* [Notebook Setup & Demo Runthrough](#Notebook Setup & Demo Runthrough)
+* [Notebook Setup & Demo Runthrough](#Notebook-Setup-&-Demo-Runthrough)
 * [Next Steps](#Next-Steps)
 * [FAQ](#FAQ)
 
