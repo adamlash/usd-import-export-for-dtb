@@ -37,7 +37,7 @@ We will need to prepare Fabric, and our DTB instance so we can match our files w
 * modules.csv: A table of modules within the ISS.
 * iss.usd:  A 3D File of the ISS.
 * openusd_msfabric_toolkit.whl: A wheel file containing the packages needed for Manipulating USD and Fabric.
-* USD Import for DTB.ipynb: The notebook including relevant code to run this Demo.
+* USDforDTB.ipynb: The notebook including relevant code to run this Demo.
 
 
 ### Fabric Prep
@@ -45,7 +45,7 @@ We will need to prepare Fabric, and our DTB instance so we can match our files w
 2. Create a Lakehouse within Fabric
     * Within the Workspace, click 'New Item' in the top left and look for 'Lakehouse'
 3. In the top Left of the Workspace, click 'Import..' and Select 'Notebook > From this Computer'
-    * Select the 'USD Import for DTB' from your Local Machine
+    * Select the 'USDforDTB' from your Local Machine
 4. Upload the following files into the Lakehouse
     * modules.csv
     * iss.usd
@@ -90,7 +90,7 @@ After a few minutes, you may want to click 'Explore' in the top right of the DTB
 With the following steps, we will extract any relevant metadata embeded within the 3D file, from here we will run the notebook to extract the data, so we can use it within our Digital Twin.
 
 ## Notebook Setup
-1. Open the 'USD Import for DTB' notebook from your Workspace
+1. Open the 'USDforDTB' notebook from your Workspace
 2. On the left, click 'Add Data Items' and select' Existing Data Sources' 
     * Tick the Lakehouse you created from the previous steps.
     * Tick the dtdm (digital twin data model) lakehouse, it will be named {DigitalTwinName}dtdm in the same Workspace.
