@@ -1,5 +1,5 @@
 # Overview
-Welcome to the USD Import and Export Demo for Digital Twin Builder. This demo leverages the OpenUSD libraries to extract relevant 3D metadata from within a file, and allows users to contexualize 3D alongside traditional IT and OT Data in a Digital Twin, all within Fabric. We aim to provide an intitial "Getting Started" jumpstart point for users wishing to include 3D Files within their digital twin data estate.
+Welcome to this demo showing USD Import for Digital Twin Builder. This demo leverages the OpenUSD libraries to extract relevant 3D metadata from within a file, and allows users to contexualize 3D alongside traditional IT and OT Data in a Digital Twin, all within Fabric. We aim to provide an intitial "Getting Started" jumpstart point for users wishing to include 3D Files within their digital twin data estate.
 
 This repo aims both to provide the Notebook and flow on how users can contextualize their own 3D, as well as a demo to show how this is possible. The demo uses data from the International Space Station representing a series of Modules, and a [3D Model build by NASA](https://science.nasa.gov/resource/international-space-station-3d-model/).
 
@@ -8,9 +8,10 @@ Our Digital Twin will be quite simple, as we want to focus this workflow an appo
 
 # Table of Contents
 * [Getting Started](#Getting-Started)
-* [Prerequisites and Setup](#Prerequisites)
+* [Prerequisites and Digital Twin Setup](#Prerequisites-and-Digital-Twin-Setup)
 * [Notebook Setup & Demo Runthrough](#Runnning-the-Notebook)
 * [Next Steps](#Next-Steps)
+* [FAQ](#FAQ)
 
 # Getting Started
 This repo makes use of a few core pieces of software:
@@ -176,7 +177,7 @@ Once created, run this Contextualization job immediately.
 
 
 ## Exploring Results
-Once all jobs have been run (check 'Manage Operations' within DTB to confirm status) we confirm matches within the notebook by clicking 'Explore' in the top right. Clicking '3DMesh' to search through the 3DMEsh Twins and typing in 'Harmony'.
+Once all jobs have been run (check 'Manage Operations' within DTB to confirm status) we confirm matches within the notebook by clicking 'Explore' in the top right. Clicking '3DMesh' to search through the 3DMesh Twins and typing in 'Harmony'.
 
 By looking at this, it should have the relevant DisplayName (the USD ID) associated to it, alongside this, it has the DTBAssetID, its representation within the Digital Twin that it is linked to.
 
@@ -195,28 +196,28 @@ You may wish to edit the `enriched_usd_file_name` value to select a specific out
 
 
 This has now created an enriched USD file. You may want to inspect this using such tools as [USD Composer](https://docs.omniverse.nvidia.com/composer/latest/index.html), [USDView](https://openusd.org/release/toolset.html#usdview) or even [Blender](https://www.blender.org/).
-![Final Config](./screenshots/USDComposerOutput.png)
 
-*Above, we can see that the 'Harmony Node 2 has a USD Property of DTB_ID, which is the representation of the instance in Digital Twin Builder*
+![Final Config](./screenshots/USDComposerOutput.png)
+*Using the Nvidia USD Composer, we can see that the 'Harmony Node 2 has a USD Property of DTB_ID, which is the representation of the instance in Digital Twin Builder*
 
 
 ## Conclusion
 With Import, we have extracted relevant 3D Metadata embedded within the scene, this can be handy for relating these geospatial concepts
-AFter export, we have a 3D file with an embedded AssetID value, this value can be used a a query point to link the 3D Geometry to its relevant Twin representation within DTB. This can now be used in 3D applications as a key to query relevant information.
+After export, we have a 3D file with an embedded AssetID value, this value can be used a a query point to link the 3D Geometry to its relevant Twin representation within DTB. This can now be used in 3D applications as a key to query relevant information.
 
 ## Next Steps
-Want to render this within Nvidia Omniverse? Check out [Nvidia Omniverse Digital Operations Twin](https://github.com/microsoft/NVIDIA-Omniverse-Azure-Operations-Twin). A demo to get you up and running with operational twins in Azure, using an enriched USD file created from this process.
+Want to render this within Nvidia Omniverse? Check out [Nvidia Omniverse Digital Operations Twin](https://github.com/microsoft/NVIDIA-Omniverse-Azure-Operations-Twin). An end-to-end guide to get you up and running with highly detailed operational twins in Azure, using an enriched USD file created from this process.
 
 
 ## FAQ
 
 *I get errors when I run through the Notebook, like my variables don't exist or libraries are not available?*
 
-Your notebook session may have disconnected due to inactivitym just simply re-run Step 0 to set and reimport these libraries once more
+Your notebook session may have disconnected due to inactivity. Just simply re-run all previous steps to set the relevant variables, reimport libraries and other required steps.
 
 *Some of the matches seem strange or incorrect*
 
-We are using the TheFuzz library to help out with matching, you may wish to tweak some setting on the fuzzy matching strategies within this Library to help fine tune everything.
+We are using the [TheFuzz](https://github.com/seatgeek/thefuzz) to help out with matching, you may wish to tweak some setting on the fuzzy matching strategies within this Library to help fine tune everything.
 
 *Most of the matches seem correct, however How can I manually edit the results?*
 
