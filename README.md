@@ -1,4 +1,5 @@
-# Overview
+# 3D USD Import and Export For Digital Twin Builder
+## Overview
 Welcome to this demo showing USD Import for Digital Twin Builder. This demo leverages the OpenUSD libraries to extract relevant 3D metadata from within a file, and allows users to contexualize 3D alongside traditional IT and OT Data in a Digital Twin, all within Fabric. We aim to provide an intitial "Getting Started" jumpstart point for users wishing to include 3D Files within their digital twin data estate.
 
 This repo aims both to provide the Notebook and flow on how users can contextualize their own 3D, as well as a demo to show how this is possible. The demo uses data from the International Space Station representing a series of Modules, and a [3D Model build by NASA](https://science.nasa.gov/resource/international-space-station-3d-model/).
@@ -6,14 +7,14 @@ This repo aims both to provide the Notebook and flow on how users can contextual
 Our Digital Twin will be quite simple, as we want to focus this workflow an apporach to 3D Data Matching, however if there is an appetite to build out an entire Digital Twin of the ISS, please log an issue as a Feature Request!
 
 
-# Table of Contents
+## Table of Contents
 * [Getting Started](#Getting-Started)
 * [Prerequisites and Digital Twin Setup](#Prerequisites-and-Digital-Twin-Setup)
 * [Notebook Setup and Demo Runthrough](#Notebook-Setup-and-Demo-Runthrough)
 * [Next Steps](#Next-Steps)
 * [FAQ](#FAQ)
 
-# Getting Started
+## Getting Started
 This repo makes use of a few core pieces of software:
 
 ### Microsoft Fabric
@@ -25,7 +26,7 @@ Within Fabric, the core technology leveraged is the Digital Twin Builder (DTB) f
 ### OpenUSD
 [OpenUSD](https://openusd.org/release/index.html) is a file standard for extending and interchanging 3D Formats. Originally designed by Pixar for use in the SFX world, it has since grown traction in the Industrial space as a fantastic file format for interchanging 3D, as well as enriching 3D with relevant semantic information and metadata.
 
-# Prerequisites and Digital Twin Setup
+## Prerequisites and Digital Twin Setup
 * Microsoft Fabric Instance
 * 3D File/s
 * Digital Twin Builder, with Mapped Entities related to the 3D file.
@@ -34,23 +35,28 @@ Within Fabric, the core technology leveraged is the Digital Twin Builder (DTB) f
 
 We will need to prepare Fabric, and our DTB instance so we can match our files within it. Within this repo are three Files
 
-* modules.csv: A table of modules within the ISS.
-* iss.usd:  A 3D File of the ISS.
-* openusd_msfabric_toolkit.whl: A wheel file containing the packages needed for Manipulating USD and Fabric.
-* USDforDTB.ipynb: The notebook including relevant code to run this Demo.
 
+```
+modules.csv -  A table of modules within the ISS.
+iss.usd -   A 3D File of the ISS.
+openusd_msfabric_toolkit.whl -  A wheel file containing the packages needed for Manipulating USD and Fabric.
+USDforDTB.ipynb -  The notebook including relevant code to run this Demo.
+```
 
 ### Fabric Prep
 1. Create new Workspace within Fabric
 2. Create a Lakehouse within Fabric
     * Within the Workspace, click 'New Item' in the top left and look for 'Lakehouse'
 3. In the top Left of the Workspace, click 'Import..' and Select 'Notebook > From this Computer'
-    * Select the 'USDforDTB' from your Local Machine
+    * Select the `USDforDTB.ipynb` from your Local Machine
 4. Upload the following files into the Lakehouse
-    * modules.csv
-    * iss.usd
-    * openusd_msfabric_toolkit.whl
-5. Under the 'Files' Directory, right click on 'modules.CSV' and load this into 'New Table'. You can leave this called modules.
+```
+modules.csv -  A table of modules within the ISS.
+iss.usd -   A 3D File of the ISS.
+openusd_msfabric_toolkit.whl -  A wheel file containing the packages needed for Manipulating USD and Fabric.
+USDforDTB.ipynb -  The notebook including relevant code to run this Demo.
+```
+5. Under the 'Files' Directory, right click on `modules.csv` and load this into 'New Table'. You can leave this called modules.
 
 ### Digital Twin Builder Preparation
 We will be creating a series of Modules within our Digital Twin instance to represent the physical [Modules of the International Space Station](https://en.wikipedia.org/wiki/Assembly_of_the_International_Space_Station#Assembly_sequence). The uploaded Modules table has all the relevant info we need to create a series of twins from this data.
@@ -86,10 +92,10 @@ After a few minutes, you may want to click 'Explore' in the top right of the DTB
 *The created Module Entity Instances within the 'Explore' Screen*
 
 
-# Notebook Setup and Demo Runthrough
+## Notebook Setup and Demo Runthrough
 With the following steps, we will extract any relevant metadata embeded within the 3D file, from here we will run the notebook to extract the data, so we can use it within our Digital Twin.
 
-## Notebook Setup
+### Notebook Setup
 1. Open the 'USDforDTB' notebook from your Workspace
 2. On the left, click 'Add Data Items' and select' Existing Data Sources' 
     * Tick the Lakehouse you created from the previous steps.
@@ -99,7 +105,7 @@ Please confirm your data lakehouse (the one with the usd file) is the default la
 
 These steps will make our notebook have the ability to query the relevant data from these sources.
 
-## Running through the Notebook.
+### Running through the Notebook.
 The following steps are going to run through the notebook. All Steps imply you running the cell once any required configuration is done. The notebok also has documentation on each cell the mirrors this, so feel free to reference that as you go!
 
 0. **Step 0: Install Required Imports.**
@@ -142,7 +148,7 @@ Once again, we run this cell and it will attempt to read in the entity data from
 
 Once this is done, we can return to DTB to bring the extracted USD Metadata into DTB. 
 
-## Mapping Exported USD to DTB
+### Mapping Exported USD to DTB
 
 Now that we have a table, we can go through standard DTB mapping phases to create our file, and link this to the Entities.
 
@@ -176,7 +182,7 @@ Once created, run this Contextualization job immediately.
 *The Configured Relationship*
 
 
-## Exploring Results
+### Exploring Results
 Once all jobs have been run (check 'Manage Operations' within DTB to confirm status) we confirm matches within the notebook by clicking 'Explore' in the top right. Clicking '3DMesh' to search through the 3DMesh Twins and typing in 'Harmony'.
 
 By looking at this, it should have the relevant DisplayName (the USD ID) associated to it, alongside this, it has the DTBAssetID, its representation within the Digital Twin that it is linked to.
@@ -186,7 +192,7 @@ By looking at this, it should have the relevant DisplayName (the USD ID) associa
 *3DMesh Instance*
 
 
-## Export DTB Metadata to USD
+### Export DTB Metadata to USD
 Back in the notebook, we can also export the Model from DTB into a new USD file with the embedded asset metadata. This would allow us to embed information from the Digital Twin model back into the USD. We can use this information as a reference for 3D applications to query fabric from, or embedding static information or constraints within the file for jobs such as Simulation.
 
 
