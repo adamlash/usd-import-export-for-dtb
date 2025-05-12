@@ -18,10 +18,10 @@ Our Digital Twin will be quite simple, as we want to focus this workflow an appo
 This repo makes use of a few core pieces of software:
 
 ### Microsoft Fabric
-[Microsoft Fabric](https://www.microsoft.com/en-us/microsoft-fabric) is an end-to-end, unified analytics platform designed to bring together all data and analytics tools into one place. It aims to provide a single environment for data professionals and business users to collaborate on data projects, covering everything from data ingestion and storage to processing and analysis.
+[Microsoft Fabric](https://www.microsoft.com/microsoft-fabric) is an end-to-end, unified analytics platform designed to bring together all data and analytics tools into one place. It aims to provide a single environment for data professionals and business users to collaborate on data projects, covering everything from data ingestion and storage to processing and analysis.
 
 ### Digital Twin Builder
-Within Fabric, the core technology leveraged is the Digital Twin Builder (DTB) from Fabric Realtime Intelligence. This makes it easy to build detailed, accurate representation of real-world operations. We can use Digital Twin Builder to define components, assets and other concepts as Entities, and relate these to represent this as a system. More info and Demos can be found at: [Digital Twin Builder](#www.microsoft.com).
+Within Fabric, the core technology leveraged is the Digital Twin Builder (DTB) from Fabric Realtime Intelligence. This makes it easy to build detailed, accurate representation of real-world operations. We can use Digital Twin Builder to define components, assets and other concepts as Entities, and relate these to represent this as a system. More info and Demos can be found at: [Digital Twin Builder](www.microsoft.com).
 
 ### OpenUSD
 [OpenUSD](https://openusd.org/release/index.html) is a file standard for extending and interchanging 3D Formats. Originally designed by Pixar for use in the SFX world, it has since grown traction in the Industrial space as a fantastic file format for interchanging 3D, as well as enriching 3D with relevant semantic information and metadata.
