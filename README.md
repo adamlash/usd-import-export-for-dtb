@@ -55,12 +55,12 @@ We will need to prepare Fabric, and our DTB instance so we can match our files w
 
    * `modules.csv` -  A table of modules within the ISS.
    * `iss.usd` -   A 3D File of the ISS.
-   * `openusd_msfabric_toolkit-0.1.0-py3-none-any.whl` -  A wheel file containing the packages needed for Manipulating USD and Fabric.    
-4. Go back to the Workspace, In the top Left of the Workspace, click 'Import..' and Select 'Notebook > From this Computer'
+   * `openusd_msfabric_toolkit-0.1.0-py3-none-any.whl` -  A wheel file containing the packages needed for Manipulating USD and Fabric.
+4. Under the 'Files' Directory, right click on `modules.csv` and load this into 'New Table'. You can leave this called modules.
+5. Go back to the Workspace, In the top Left of the Workspace, click 'Import..' and Select 'Notebook > From this Computer'
     * Select the `USDforDTB.ipynb` from your Local Machine
 
 
-5. Under the 'Files' Directory, right click on `modules.csv` and load this into 'New Table'. You can leave this called modules.
 
 ### Digital Twin Builder Preparation
 
