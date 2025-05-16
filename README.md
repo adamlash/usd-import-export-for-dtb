@@ -51,13 +51,14 @@ We will need to prepare Fabric, and our DTB instance so we can match our files w
 1. Create new Workspace within Fabric
 2. Create a Lakehouse within Fabric
     * Within the Workspace, click 'New Item' in the top left and look for 'Lakehouse'
-3. In the top Left of the Workspace, click 'Import..' and Select 'Notebook > From this Computer'
-    * Select the `USDforDTB.ipynb` from your Local Machine
-4. Upload the following files into the Lakehouse:
+3. Upload the following files into the Lakehouse:
 
    * `modules.csv` -  A table of modules within the ISS.
    * `iss.usd` -   A 3D File of the ISS.
-   * `openusd_msfabric_toolkit-0.1.0-py3-none-any.whl` -  A wheel file containing the packages needed for Manipulating USD and Fabric.
+   * `openusd_msfabric_toolkit-0.1.0-py3-none-any.whl` -  A wheel file containing the packages needed for Manipulating USD and Fabric.    
+4. Go back to the Workspace, In the top Left of the Workspace, click 'Import..' and Select 'Notebook > From this Computer'
+    * Select the `USDforDTB.ipynb` from your Local Machine
+
 
 5. Under the 'Files' Directory, right click on `modules.csv` and load this into 'New Table'. You can leave this called modules.
 
