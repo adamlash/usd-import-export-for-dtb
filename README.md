@@ -26,7 +26,7 @@ This repo makes use of a few core pieces of software:
 
 ### Digital Twin Builder
 
-Within Fabric, the core technology leveraged is the Digital Twin Builder (DTB) from Fabric Realtime Intelligence. This makes it easy to build detailed, accurate representation of real-world operations. We can use Digital Twin Builder to define components, assets and other concepts as Entities, and relate these to represent this as a system. More info and Demos can be found at: [Digital Twin Builder](www.microsoft.com).
+Within Fabric, the core technology leveraged is the Digital Twin Builder (DTB) from Fabric Realtime Intelligence. This makes it easy to build detailed, accurate representation of real-world operations. We can use Digital Twin Builder to define components, assets and other concepts as Entities, and relate these to represent this as a system. More info and Demos can be found at: [Digital Twin Builder](https://www.microsoft.com/microsoft-fabric).
 
 ### OpenUSD
 
@@ -41,10 +41,10 @@ Within Fabric, the core technology leveraged is the Digital Twin Builder (DTB) f
 
 We will need to prepare Fabric, and our DTB instance so we can match our files within it. Within this repo are three Files
 
-`modules.csv` -  A table of modules within the ISS.
-`iss.usd` -   A 3D File of the ISS.
-`openusd_msfabric_toolkit.whl` -  A wheel file containing the packages needed for Manipulating USD and Fabric.
-`USDforDTB.ipynb` -  The notebook including relevant code to run this Demo.
+   * `modules.csv` -  A table of modules within the ISS.
+   * `iss.usd` -   A 3D File of the ISS.
+   * `openusd_msfabric_toolkit-0.1.0-py3-none-any.whl` -  A wheel file containing the packages needed for Manipulating USD and Fabric.
+   * `USDforDTB.ipynb` -  The notebook including relevant code to run this Demo.
 
 ### Fabric Prep
 
@@ -57,8 +57,7 @@ We will need to prepare Fabric, and our DTB instance so we can match our files w
 
    * `modules.csv` -  A table of modules within the ISS.
    * `iss.usd` -   A 3D File of the ISS.
-   * `openusd_msfabric_toolkit.whl` -  A wheel file containing the packages needed for Manipulating USD and Fabric.
-   * `USDforDTB.ipynb` -  The notebook including relevant code to run this Demo.
+   * `openusd_msfabric_toolkit-0.1.0-py3-none-any.whl` -  A wheel file containing the packages needed for Manipulating USD and Fabric.
 
 5. Under the 'Files' Directory, right click on `modules.csv` and load this into 'New Table'. You can leave this called modules.
 
@@ -75,7 +74,7 @@ We will be creating a series of Modules within our Digital Twin instance to repr
 3. Click 'Add Entity' and name this Entity '3DMesh'. This will contain Entity Instances for each 3D Representation found within the 3D file.
 4. Click on the Entity 'Module' and click on 'Mappings' Tab, Click 'Add Data' within the tab
 5. Within the new window that appears, click 'Select Lakehouse Table'
-6. Select the Lakehouse created above, and teh 'Modules' table within it.
+6. Select the Lakehouse created above, and the 'Modules' table within it.
 7. For 'Unique ID' select 'Module'
     * The Unique ID is our Unique Identifier for any Entity Instances that get created.
 8. For Under 'Mapped Properties' select:
